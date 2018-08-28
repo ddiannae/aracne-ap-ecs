@@ -1,0 +1,14 @@
+{
+  "family": "aracne-transregulation",
+	"networkMode": "none",
+  "containerDefinitions": [
+    {
+      "name": "aracne-cont",
+      "image": "ohsucompbio/aracne:latest",
+      "memory": 512, 
+      "command": [
+        "aracne -e https://s3.amazonaws.com/transregulation-aracne-inputs/Lung_Length.full_GC.full_Between.tmm_Arsyn_Normal -o https://s3.amazonaws.com/transregulation-aracne-results/lung-normal/ --pvalue 1E-8 --seed 1 --calculateThreshold"
+      ]
+    }
+  ]
+}
